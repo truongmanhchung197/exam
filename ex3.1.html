@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countVowelChar(arr) {
+        let arrVowel = ['a', 'o', 'u', 'i', 'e', 'A', 'O', 'U', 'I', 'E'];
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < 10; j++) {
+                if (arr[i] === arrVowel[j]) {
+                    count += 1;
+                }
+            }
+        }
+        if (count === 0) {
+            return false;
+        } else {
+            return count;
+        }
+    }
+
+    let str = prompt("Enter any string: ");
+    let arr = [];
+    for (let i = 0; i < str.length; i++) {
+        arr.push(str[i]);
+    }
+    alert(countVowelChar(arr));
+</script>
+
+</body>
+</html>

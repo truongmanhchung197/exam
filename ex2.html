@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findIndex(num, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (num === arr[i]) {
+                return i + 1;
+            }
+        }
+        return false;
+    }
+
+    let arr = [1, 2, 3, 4, 5, 6, 7];
+    let num = parseInt(prompt("Enter any integer: "));
+    if (findIndex(num, arr)) {
+        alert("The entered integer belongs to the given array.")
+    } else {
+        alert("The entered integer is not in a given array.")
+    }
+</script>
+
+</body>
+</html>
